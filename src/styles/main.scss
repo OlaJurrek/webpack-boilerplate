@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Apropal Bold";
+  src: url(../fonts/apropal-bold.woff2) format("woff2");
+}
+
+body {
+  background-color: lightgrey;
+  // background-image: url(../images/bg.jpg);
+  background-size: cover;
+  display: grid;
+}
+
+.main-headline {
+  font-family: "Apropal Bold";
+  color: #fff;
+  transform: scale(0.9);
+}
