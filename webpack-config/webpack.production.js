@@ -1,15 +1,15 @@
-const path = require("path");
+const path = require('path');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
-const webpackMerge = require("webpack-merge");
-const commonConfig = require("./webpack.common");
+const webpackMerge = require('webpack-merge');
+const commonConfig = require('./webpack.common');
 
 module.exports = webpackMerge(commonConfig, {
-  mode: "production",
+  mode: 'production',
   output: {
-    filename: "[name].[contenthash].bundle.js",
-    path: path.resolve(__dirname, "../web")
+    filename: '[name].[contenthash].bundle.js',
+    path: path.resolve(__dirname, '../web'),
   },
   module: {
     rules: [
@@ -17,24 +17,22 @@ module.exports = webpackMerge(commonConfig, {
         test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
+          'css-loader',
           {
-            loader: "postcss-loader",
+            loader: 'postcss-loader',
             options: {
               config: {
-                path: "./webpack-config/"
-              }
-            }
+                path: './webpack-config/',
+              },
+            },
           },
-          "sass-loader"
-        ]
-      }
-    ]
+          'sass-loader',
+        ],
+      },
+    ],
   },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].[contenthash].bundle.css" })
-  ],
+  plugins: [new MiniCssExtractPlugin({ filename: '[name].[contenthash].bundle.css' })],
   optimization: {
-    minimizer: []
-  }
+    minimizer: [],
+  },
 });

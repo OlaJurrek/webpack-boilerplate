@@ -4,7 +4,7 @@
   "description": "webpack 4 boilerplate",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --config webpack-config/webpack.development.js --hot --watch --open",
+    "start": "webpack-dev-server --mode development --config webpack-config/webpack.development.js --hot --open",
     "build": "webpack --mode production --config webpack-config/webpack.production.js"
   },
   "keywords": [],
@@ -20,7 +20,6 @@
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^3.0.0",
-    "postcss-preset-env": "^6.7.0",
     "sass": "^1.26.11",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
